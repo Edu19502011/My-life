@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificações - Eduardo Wanka | Qualificações Profissionais</title>
+    <meta name="description" content="Confira minhas certificações profissionais em desenvolvimento web, cloud computing e tecnologias modernas. Qualificações AWS, React, Node.js e mais.">
+    <meta name="keywords" content="certificações, aws, react, node.js, javascript, cloud computing, desenvolvimento web">
+    <meta name="author" content="Eduardo Wanka">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Certificações - Eduardo Wanka">
+    <meta property="og:description" content="Minhas certificações profissionais em tecnologias modernas e desenvolvimento web.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduardowanka.dev/certifications.html">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="page-background">
+        <div class="hero-shader"></div>
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-grid"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Eduardo Wanka</span>
+                <span class="logo-subtitle">Senior Full Stack Developer</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">Sobre</a>
+                <a href="index.html#experience" class="nav-link">Experiência</a>
+                <a href="index.html#skills" class="nav-link">Habilidades</a>
+                <a href="index.html#projects" class="nav-link">Projetos</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="certifications.html" class="nav-link active">Certificações</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+                <a href="comments.html" class="nav-link">Depoimentos</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-hire" id="hireButton">Contratar</button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="certifications-header">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-award"></i>
+                    Certificações
+                </span>
+                <h1 class="page-title">Qualificações Profissionais</h1>
+                <p class="page-subtitle">
+                    Compromisso com a excelência e aprendizado contínuo através de 
+                    certificações reconhecidas internacionalmente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Overview -->
+    <section class="certifications-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-card fade-in">
+                    <div class="overview-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3 class="overview-number" data-count="12">0</h3>
+                        <p class="overview-label">Certificações Ativas</p>
+                    </div>
+                </div>
+                <div class="overview-card fade-in">
+                    <div class="overview-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3 class="overview-number" data-count="5">0</h3>
+                        <p class="overview-label">Certificações Cloud</p>
+                    </div>
+                </div>
+                <div class="overview-card fade-in">
+                    <div class="overview-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3 class="overview-number" data-count="7">0</h3>
+                        <p class="overview-label">Certificações Dev</p>
+                    </div>
+                </div>
+                <div class="overview-card fade-in">
+                    <div class="overview-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3 class="overview-number" data-count="98">0</h3>
+                        <p class="overview-label">Taxa de Aprovação (%)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications by Category -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Certificações por Categoria</h2>
+                <p class="section-subtitle">
+                    Organizadas por área de conhecimento para melhor visualização
+                </p>
+            </div>
+
+            <!-- Cloud Certifications -->
+            <div class="category-section fade-in">
+                <h3 class="category-title">
+                    <i class="fas fa-cloud"></i>
+                    Cloud Computing
+                </h3>
+                <div class="certifications-grid">
+                    <div class="cert-card featured">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/120px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+                            </div>
+                            <div class="cert-badge">Professional</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">AWS Solutions Architect Professional</h4>
+                            <p class="cert-description">
+                                Certificação profissional em arquitetura de soluções AWS, 
+                                focada em design de sistemas distribuídos e escaláveis.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2025-2027</span>
+                                <span class="cert-id">ID: AWS-SAP-2024-001</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">EC2</span>
+                                <span class="skill-tag">S3</span>
+                                <span class="skill-tag">RDS</span>
+                                <span class="skill-tag">Lambda</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('AWS-SAP-2024-001')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/120px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+                            </div>
+                            <div class="cert-badge">Associate</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">AWS Developer Associate</h4>
+                            <p class="cert-description">
+                                Certificação em desenvolvimento de aplicações na AWS, 
+                                incluindo debugging e otimização de performance.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2026</span>
+                                <span class="cert-id">ID: AWS-DA-2024-002</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">DynamoDB</span>
+                                <span class="skill-tag">API Gateway</span>
+                                <span class="skill-tag">CloudFormation</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('AWS-DA-2024-002')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/120px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+                            </div>
+                            <div class="cert-badge">Specialty</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">AWS Security Specialty</h4>
+                            <p class="cert-description">
+                                Especialização em segurança na AWS, cobrindo criptografia, 
+                                controle de acesso e conformidade de dados.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2026</span>
+                                <span class="cert-id">ID: AWS-SS-2024-003</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">IAM</span>
+                                <span class="skill-tag">KMS</span>
+                                <span class="skill-tag">CloudTrail</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('AWS-SS-2024-003')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Certifications -->
+            <div class="category-section fade-in">
+                <h3 class="category-title">
+                    <i class="fab fa-react"></i>
+                    Frontend Development
+                </h3>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <i class="fab fa-react" style="font-size: 2rem; color: #61DAFB;"></i>
+                            </div>
+                            <div class="cert-badge">Advanced</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">React Professional Certification</h4>
+                            <p class="cert-description">
+                                Certificação avançada em React, cobrindo hooks, context API, 
+                                performance optimization e arquitetura de aplicações.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2026</span>
+                                <span class="cert-id">ID: REACT-PRO-2024-004</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">Hooks</span>
+                                <span class="skill-tag">Redux</span>
+                                <span class="skill-tag">Testing</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('REACT-PRO-2024-004')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <i class="fab fa-js-square" style="font-size: 2rem; color: #F7DF1E;"></i>
+                            </div>
+                            <div class="cert-badge">Expert</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">JavaScript Mastery Certification</h4>
+                            <p class="cert-description">
+                                Certificação completa em JavaScript moderno, incluindo ES6+, 
+                                async/await, programação funcional e padrões de design.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2025</span>
+                                <span class="cert-id">ID: JS-MASTER-2024-005</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">ES6+</span>
+                                <span class="skill-tag">Async</span>
+                                <span class="skill-tag">Functional</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('JS-MASTER-2024-005')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Certifications -->
+            <div class="category-section fade-in">
+                <h3 class="category-title">
+                    <i class="fas fa-server"></i>
+                    Backend Development
+                </h3>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <i class="fab fa-node-js" style="font-size: 2rem; color: #339933;"></i>
+                            </div>
+                            <div class="cert-badge">Professional</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">Node.js Professional Certification</h4>
+                            <p class="cert-description">
+                                Certificação profissional em Node.js, cobrindo APIs REST, 
+                                microservices, performance e segurança de aplicações.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2026</span>
+                                <span class="cert-id">ID: NODE-PRO-2024-006</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">Express</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">GraphQL</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('NODE-PRO-2024-006')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <i class="fas fa-database" style="font-size: 2rem; color: #4479A1;"></i>
+                            </div>
+                            <div class="cert-badge">Associate</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">MongoDB Developer Associate</h4>
+                            <p class="cert-description">
+                                Certificação em desenvolvimento com MongoDB, incluindo 
+                                modelagem de dados, agregações e otimização de queries.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2025</span>
+                                <span class="cert-id">ID: MDB-DEV-2024-007</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">Aggregation</span>
+                                <span class="skill-tag">Indexing</span>
+                                <span class="skill-tag">Sharding</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('MDB-DEV-2024-007')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps Certifications -->
+            <div class="category-section fade-in">
+                <h3 class="category-title">
+                    <i class="fab fa-docker"></i>
+                    DevOps & Tools
+                </h3>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <i class="fab fa-docker" style="font-size: 2rem; color: #2496ED;"></i>
+                            </div>
+                            <div class="cert-badge">Professional</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">Docker Certified Associate</h4>
+                            <p class="cert-description">
+                                Certificação profissional em Docker, cobrindo containers, 
+                                orquestração, networking e volumes em produção.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2026</span>
+                                <span class="cert-id">ID: DCA-2024-008</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">Containers</span>
+                                <span class="skill-tag">Swarm</span>
+                                <span class="skill-tag">Compose</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('DCA-2024-008')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <div class="cert-provider">
+                                <i class="fas fa-cogs" style="font-size: 2rem; color: #FF6B6B;"></i>
+                            </div>
+                            <div class="cert-badge">Associate</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4 class="cert-title">Kubernetes Administrator</h4>
+                            <p class="cert-description">
+                                Certificação em administração de clusters Kubernetes, 
+                                incluindo deployment, scaling e troubleshooting.
+                            </p>
+                            <div class="cert-details">
+                                <span class="cert-date">Validade: 2024-2026</span>
+                                <span class="cert-id">ID: K8S-ADMIN-2024-009</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-skills">
+                                <span class="skill-tag">Pods</span>
+                                <span class="skill-tag">Services</span>
+                                <span class="skill-tag">Ingress</span>
+                            </div>
+                            <button class="verify-btn" onclick="verifyCertification('K8S-ADMIN-2024-009')">
+                                <i class="fas fa-check-circle"></i>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Validation -->
+    <section class="skills-validation">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Validação de Habilidades</h2>
+                <p class="section-subtitle">
+                    Todas as certificações podem ser verificadas através dos links oficiais
+                </p>
+            </div>
+            
+            <div class="validation-grid">
+                <div class="validation-card fade-in">
+                    <div class="validation-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="validation-title">Autenticidade Garantida</h3>
+                    <p class="validation-description">
+                        Todas as certificações listadas são autênticas e podem ser 
+                        verificadas através dos sistemas oficiais das respectivas empresas.
+                    </p>
+                </div>
+                
+                <div class="validation-card fade-in">
+                    <div class="validation-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="validation-title">Manutenção Contínua</h3>
+                    <p class="validation-description">
+                        Comprometido em manter as certificações atualizadas através 
+                        de recertificações e aprendizado contínuo.
+                    </p>
+                </div>
+                
+                <div class="validation-card fade-in">
+                    <div class="validation-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="validation-title">Evolução Constante</h3>
+                    <p class="validation-description">
+                        Sempre buscando novas certificações e conhecimentos 
+                        para acompanhar as tendências tecnológicas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eduardo Wanka</h3>
+                    <p>Desenvolvedor Full Stack Senior</p>
+                    <p>Transformando ideias em realidade digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#about">Sobre Mim</a></li>
+                        <li><a href="index.html#projects">Projetos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="certifications.html">Certificações</a></li>
+                        <li><a href="comments.html">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@eduardowanka.dev</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eduardo Wanka. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="certifications.js"></script>
+</body>
+</html>

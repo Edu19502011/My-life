@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Eduardo Wanka | Artigos Técnicos & Insights</title>
+    <meta name="description" content="Leia artigos técnicos sobre desenvolvimento web, React, Node.js, AWS e as últimas tendências em tecnologia. Insights e tutoriais por Eduardo Wanka.">
+    <meta name="keywords" content="blog, artigos técnicos, desenvolvimento web, react, node.js, aws, javascript, tutoriais">
+    <meta name="author" content="Eduardo Wanka">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog - Eduardo Wanka | Artigos Técnicos">
+    <meta property="og:description" content="Artigos e tutoriais sobre desenvolvimento web, tecnologias modernas e melhores práticas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduardowanka.dev/blog.html">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="page-background">
+        <div class="hero-shader"></div>
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-grid"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Eduardo Wanka</span>
+                <span class="logo-subtitle">Senior Full Stack Developer</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">Sobre</a>
+                <a href="index.html#experience" class="nav-link">Experiência</a>
+                <a href="index.html#skills" class="nav-link">Habilidades</a>
+                <a href="index.html#projects" class="nav-link">Projetos</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="certifications.html" class="nav-link">Certificações</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+                <a href="comments.html" class="nav-link">Depoimentos</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-hire" id="hireButton">Contratar</button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-blog"></i>
+                    Blog
+                </span>
+                <h1 class="page-title">Artigos & Insights</h1>
+                <p class="page-subtitle">
+                    Explorando as últimas tendências em tecnologia, compartilhando conhecimento 
+                    e experiências do mundo do desenvolvimento web moderno.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-post-card">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop" alt="React 19 Features">
+                    <div class="featured-badge">Destaque</div>
+                </div>
+                <div class="featured-content">
+                    <div class="post-meta">
+                        <span class="post-category">React</span>
+                        <span class="post-date">Dezembro 15, 2024</span>
+                        <span class="post-read-time">8 min leitura</span>
+                    </div>
+                    <h2 class="featured-title">
+                        <a href="#">React 19: O Futuro do Desenvolvimento Web está Aqui</a>
+                    </h2>
+                    <p class="featured-excerpt">
+                        Explore as novas funcionalidades revolucionárias do React 19, incluindo Server Components, 
+                        Actions e melhorias de performance que estão transformando a forma como construímos 
+                        aplicações web modernas.
+                    </p>
+                    <div class="post-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Web Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="blogSearch" placeholder="Buscar artigos...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="react">React</button>
+                    <button class="filter-btn" data-filter="nodejs">Node.js</button>
+                    <button class="filter-btn" data-filter="aws">AWS</button>
+                    <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                    <button class="filter-btn" data-filter="tutorial">Tutoriais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid">
+                <!-- Post 1 -->
+                <article class="post-card" data-category="nodejs">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop" alt="Node.js Performance">
+                        <div class="post-overlay">
+                            <a href="#" class="read-more-btn">Ler Artigo</a>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Node.js</span>
+                            <span class="post-date">Dezembro 10, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Otimizando Performance em Aplicações Node.js</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            Aprenda técnicas avançadas para melhorar a performance de suas aplicações Node.js, 
+                            desde otimização de event loop até estratégias de caching eficientes.
+                        </p>
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag">Performance</span>
+                                <span class="tag">Backend</span>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 1.2k</span>
+                                <span><i class="fas fa-clock"></i> 6 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post-card" data-category="aws">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&h=400&fit=crop" alt="AWS Lambda">
+                        <div class="post-overlay">
+                            <a href="#" class="read-more-btn">Ler Artigo</a>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">AWS</span>
+                            <span class="post-date">Dezembro 5, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Serverless com AWS Lambda: Guia Completo</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            Descubra como construir aplicações serverless escaláveis usando AWS Lambda, 
+                            API Gateway e outros serviços da AWS para criar soluções robustas e econômicas.
+                        </p>
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag">Serverless</span>
+                                <span class="tag">Cloud</span>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 890</span>
+                                <span><i class="fas fa-clock"></i> 12 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post-card" data-category="javascript">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600&h=400&fit=crop" alt="JavaScript Patterns">
+                        <div class="post-overlay">
+                            <a href="#" class="read-more-btn">Ler Artigo</a>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">JavaScript</span>
+                            <span class="post-date">Novembro 28, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Design Patterns em JavaScript Moderno</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            Explore os padrões de design mais importantes em JavaScript e como aplicá-los 
+                            em projetos modernos para escrever código mais limpo e manutenível.
+                        </p>
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag">Patterns</span>
+                                <span class="tag">Best Practices</span>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 2.1k</span>
+                                <span><i class="fas fa-clock"></i> 15 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="post-card" data-category="react">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop" alt="React Hooks">
+                        <div class="post-overlay">
+                            <a href="#" class="read-more-btn">Ler Artigo</a>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">React</span>
+                            <span class="post-date">Novembro 20, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Custom Hooks: Extensibilidade em React</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            Aprenda a criar Custom Hooks poderosos em React para reutilizar lógica 
+                            de estado e efeitos em diferentes componentes de sua aplicação.
+                        </p>
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag">Hooks</span>
+                                <span class="tag">Reusabilidade</span>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 1.5k</span>
+                                <span><i class="fas fa-clock"></i> 10 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="post-card" data-category="tutorial">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="Full Stack Tutorial">
+                        <div class="post-overlay">
+                            <a href="#" class="read-more-btn">Ler Artigo</a>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tutorial</span>
+                            <span class="post-date">Novembro 15, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Construindo uma API REST Completa do Zero</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            Tutorial passo a passo para construir uma API REST robusta usando Node.js, 
+                            Express, PostgreSQL e implementando autenticação JWT.
+                        </p>
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag">API</span>
+                                <span class="tag">Backend</span>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 3.2k</span>
+                                <span><i class="fas fa-clock"></i> 25 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 6 -->
+                <article class="post-card" data-category="aws">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Docker AWS">
+                        <div class="post-overlay">
+                            <a href="#" class="read-more-btn">Ler Artigo</a>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">AWS</span>
+                            <span class="post-date">Novembro 10, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Docker na AWS: ECS vs EKS</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            Comparação detalhada entre Amazon ECS e EKS para orquestração de containers, 
+                            ajudando você a escolher a melhor solução para seu projeto.
+                        </p>
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag">Docker</span>
+                                <span class="tag">DevOps</span>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 1.8k</span>
+                                <span><i class="fas fa-clock"></i> 14 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    Carregar Mais Artigos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">Fique por dentro das novidades!</h3>
+                    <p class="newsletter-description">
+                        Rebaça os últimos artigos, tutoriais e insights sobre desenvolvimento web 
+                        diretamente na sua caixa de entrada.
+                    </p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu melhor email" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Inscrever-se
+                            </button>
+                        </div>
+                        <p class="newsletter-disclaimer">
+                            Sem spam! Você pode se desinscrever a qualquer momento.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eduardo Wanka</h3>
+                    <p>Desenvolvedor Full Stack Senior</p>
+                    <p>Transformando ideias em realidade digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#about">Sobre Mim</a></li>
+                        <li><a href="index.html#projects">Projetos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="certifications.html">Certificações</a></li>
+                        <li><a href="comments.html">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@eduardowanka.dev</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eduardo Wanka. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

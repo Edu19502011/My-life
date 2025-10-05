@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Wanka - Desenvolvedor Full Stack Senior | Portfolio Profissional</title>
+    <meta name="description" content="Portfólio profissional de Eduardo Wanka, desenvolvedor full stack senior com 5+ anos de experiência em React, Node.js, AWS e tecnologias modernas. Transformando ideias em realidade digital.">
+    <meta name="keywords" content="desenvolvedor full stack senior, react, node.js, aws, javascript, portfolio, web development, software engineer, sistemas escaláveis">
+    <meta name="author" content="Eduardo Wanka">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Eduardo Wanka - Desenvolvedor Full Stack Senior">
+    <meta property="og:description" content="Transformo ideias em realidade digital através de código limpo e arquitetura robusta. 5+ anos transformando negócios.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduardowanka.dev">
+    <meta property="og:image" content="resources/eduardo-hero.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eduardo Wanka - Desenvolvedor Full Stack Senior">
+    <meta name="twitter:description" content="Portfólio profissional com 5+ anos de experiência em desenvolvimento web e aplicações empresariais.">
+    <meta name="twitter:image" content="resources/eduardo-hero.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1423882071738421309/1424242643608539186/AAHar4cAf9pydK708EL0fBLBiuzXi5Wu_c99cFGgIttKFX2PgsgXTImJjvttLdl7pT8GqnQCDxU9-pfjEjHEf5p9yZhO87G2g8wGo24wuecU0s-yBl-23lLTuh1ZAd4MD-Ys9fCs3U9861d-p5YH82UdjewKW5149ghe4nGx6wTSE9nPG5ExRryDwDE7W6XqyOUzUR6zBL_bRKuAUGRLzOOLvKvj2BFgDYzJllkChhYH7OESs14ybWsvAmq5mCJA9GVdADAKzuMFFwmsRrXVzayzvsYRx15qu1oXdw5ns4AgwzaAU6N-aLp0FWTAA3s-7XWOqnj59Au5-iBGFRpTnUzUnma_s1024.png?ex=68e33cd3&is=68e1eb53&hm=d16f517794b998cf037d1c9a2dfa8281be4bb7a3e2497a9da4af8cac60c804a2&=&format=webp&quality=lossless&width=802&height=968">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="page-background">
+        <div class="hero-shader"></div>
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-grid"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://media.discordapp.net/attachments/1423882071738421309/1424242643608539186/AAHar4cAf9pydK708EL0fBLBiuzXi5Wu_c99cFGgIttKFX2PgsgXTImJjvttLdl7pT8GqnQCDxU9-pfjEjHEf5p9yZhO87G2g8wGo24wuecU0s-yBl-23lLTuh1ZAd4MD-Ys9fCs3U9861d-p5YH82UdjewKW5149ghe4nGx6wTSE9nPG5ExRryDwDE7W6XqyOUzUR6zBL_bRKuAUGRLzOOLvKvj2BFgDYzJllkChhYH7OESs14ybWsvAmq5mCJA9GVdADAKzuMFFwmsRrXVzayzvsYRx15qu1oXdw5ns4AgwzaAU6N-aLp0FWTAA3s-7XWOqnj59Au5-iBGFRpTnUzUnma_s1024.png?ex=68e33cd3&is=68e1eb53&hm=d16f517794b998cf037d1c9a2dfa8281be4bb7a3e2497a9da4af8cac60c804a2&=&format=webp&quality=lossless&width=802&height=968" alt="Eduardo Wanka" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 0.75rem;">
+                <div>
+                    <span class="logo-text"></span>
+                    <span class="logo-subtitle">Software Engineer</span>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#experience" class="nav-link">Experiência</a>
+                <a href="#skills" class="nav-link">Habilidades</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#certifications" class="nav-link">Certificações</a>
+                <a href="#contact" class="nav-link">Contato</a>
+                <a href="comments.html" class="nav-link">Depoimentos</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-hire" id="hireButton">Contratar</button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-circle dot-pulse"></i>
+                    <span>Disponível para projetos</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text" data-splitting>Eduardo Wanka</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typed-text"></span>
+                </div>
+                <p class="hero-description">
+                    Transformo ideias em realidade digital através de código limpo, arquitetura robusta 
+                    e tecnologias modernas. Com 5+ anos de experiência, ajudo empresas a construir 
+                    aplicações escaláveis que impulsionam seus negócios.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="scrollToSection('projects')">
+                        <i class="fas fa-rocket"></i>
+                        Ver Projetos
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-handshake"></i>
+                        Vamos Conversar
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <div class="hero-avatar">
+                        <img src="https://media.discordapp.net/attachments/1373071075491184756/1424260530658480158/AAHar4cN3UbcKvo4Fhec8N_E0fmB_N8fpyWYV5b7F5s62CsuaQd5PI_H8p8PGnbKPz5_e6dtIVkPBpuxdwS2_6L3rZ0-KxgpdyrAo0JNAAwCjHUPOm0mpsAhU9cl5lhCnwwzEER74VxVh4WD4OAbO9raDVSTLjkaarVyc6cL4KmYG83cnFA0x2pNjVQVDY3fv0TqHSkTZzoXKsT0pTyuszBCG7xhNp6lNlD98RftDeJNflSfftkwkAIz19rT5nmeKZYW8T2KUj_zCFgF3xkNwXFmP6v8irpBFhCfHeMyDufXa64CS61BxyIRoDX9ncEetHrR3CfzIx18D_Vjv6zvjCWXXtZAs1024.png?ex=68e34d7b&is=68e1fbfb&hm=4bed5208333746b0f348ffab77102f1d4e35f6f29864bbdbaacbfd1894a53c77&=&format=webp&quality=lossless&width=802&height=968" alt="Eduardo Wanka">
+                        <div class="hero-avatar-glow"></div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-icon"><i class="fab fa-react"></i></div>
+                        <div class="floating-icon"><i class="fab fa-node-js"></i></div>
+                        <div class="floating-icon"><i class="fab fa-aws"></i></div>
+                        <div class="floating-icon"><i class="fab fa-docker"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Sobre Mim</span>
+                <h2 class="section-title">Construindo o futuro digital</h2>
+                <p class="section-subtitle">
+                    Com mais de 5 anos de experiência em desenvolvimento web, 
+                    especializei-me em criar soluções robustas e escaláveis.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <p class="about-description">
+                        Olá! Sou Eduardo Wanka, um desenvolvedor full stack apaixonado por transformar 
+                        ideias complexas em soluções elegantes e funcionais. Minha jornada começou com 
+                        curiosidade sobre como as coisas funcionam na web, e evoluiu para uma carreira 
+                        focada em construir aplicações que impactam positivamente a vida das pessoas.
+                    </p>
+                    <p class="about-description">
+                        Ao longo dos anos, trabalhei com startups em crescimento e empresas estabelecidas, 
+                        sempre buscando excelência técnica e valor de negócio. Minha abordagem combina 
+                        as melhores práticas de desenvolvimento com tecnologias de ponta para entregar 
+                        resultados excepcionais.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projetos Entregues</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-skills slide-in-right">
+                    <h3 class="skills-title">Tecnologias Principais</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span class="skill-name">React</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Experiência</span>
+                <h2 class="section-title">Minha trajetória profissional</h2>
+                <p class="section-subtitle">
+                    Uma jornada de crescimento contínuo e aprendizado constante
+                </p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2023 - Presente</div>
+                        <h3 class="timeline-title">Senior Full Stack Developer</h3>
+                        <p class="timeline-company">Tech Solutions Inc</p>
+                        <p class="timeline-description">
+                            Liderando o desenvolvimento de aplicações enterprise-scale, 
+                            arquitetando soluções cloud-native e mentorando equipe de desenvolvedores.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2021 - 2023</div>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">StartupBoost</p>
+                        <p class="timeline-description">
+                            Desenvolvimento de MVPs e produtos SaaS, trabalhando diretamente 
+                            com fundadores para transformar ideias em realidade.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2019 - 2021</div>
+                        <h3 class="timeline-title">Frontend Developer</h3>
+                        <p class="timeline-company">Digital Agency Pro</p>
+                        <p class="timeline-description">
+                            Especialização em interfaces modernas e responsivas, 
+                            colaborando com designers UX/UI para criar experiências excepcionais.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">SASS</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Habilidades</span>
+                <h2 class="section-title">Tecnologias & Competências</h2>
+                <p class="section-subtitle">
+                    Um conjunto diversificado de ferramentas e conhecimentos
+                </p>
+            </div>
+            
+            <div class="skills-categories">
+                <div class="skill-category fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Frontend
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill">React / Next.js</div>
+                        <div class="skill">TypeScript</div>
+                        <div class="skill">Vue.js</div>
+                        <div class="skill">Tailwind CSS</div>
+                        <div class="skill">SASS / SCSS</div>
+                        <div class="skill">Webpack / Vite</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill">Node.js / Express</div>
+                        <div class="skill">Python / Django</div>
+                        <div class="skill">PostgreSQL / MongoDB</div>
+                        <div class="skill">Redis / Elasticsearch</div>
+                        <div class="skill">GraphQL / REST APIs</div>
+                        <div class="skill">Microservices</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-cloud"></i>
+                        DevOps & Cloud
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill">AWS / GCP</div>
+                        <div class="skill">Docker / Kubernetes</div>
+                        <div class="skill">CI/CD Pipelines</div>
+                        <div class="skill">Terraform</div>
+                        <div class="skill">Monitoring</div>
+                        <div class="skill">Security Best Practices</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Ferramentas
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill">Git / GitHub</div>
+                        <div class="skill">VS Code</div>
+                        <div class="skill">Figma</div>
+                        <div class="skill">Postman</div>
+                        <div class="skill">Jira / Trello</div>
+                        <div class="skill">Linux / macOS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Projetos</span>
+                <h2 class="section-title">Meus Trabalhos Recentes</h2>
+                <p class="section-subtitle">
+                    Uma seleção de projetos que demonstram minhas habilidades
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card featured fade-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" alt="SaaS Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Ver Código">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                        <h3 class="project-title">Plataforma SaaS Enterprise</h3>
+                        <p class="project-description">
+                            Plataforma completa de gestão empresarial com dashboard analítico, 
+                            autenticação avançada e integração com múltiplos serviços.
+                        </p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-users"></i> 500+ usuários</span>
+                            <span><i class="fas fa-chart-line"></i> 99.9% uptime</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" alt="E-commerce">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Ver Código">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <h3 class="project-title">E-commerce Moderno</h3>
+                        <p class="project-description">
+                            Loja virtual completa com carrinho de compras, pagamentos 
+                            integrados e sistema de gestão de inventário.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop" alt="Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Ver Código">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p class="project-description">
+                            Painel de controle com visualizações de dados em tempo real, 
+                            relatórios customizáveis e exportação de dados.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=300&fit=crop" alt="Mobile App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Ver Código">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">GraphQL</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <h3 class="project-title">App Mobile Social</h3>
+                        <p class="project-description">
+                            Aplicativo mobile para networking profissional com chat em tempo real, 
+                            geolocalização e integração com redes sociais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Contato</span>
+                <h2 class="section-title">Vamos Trabalhar Juntos</h2>
+                <p class="section-subtitle">
+                    Estou sempre aberto a novos desafios e oportunidades
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info slide-in-left">
+                    <h3 class="contact-title">Entre em Contato</h3>
+                    <p class="contact-description">
+                        Pronto para transformar sua ideia em realidade? Vamos conversar sobre 
+                        seu projeto e descobrir como posso ajudá-lo a alcançar seus objetivos.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:contato@eduardowanka.dev">dudu.wanka@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <a href="#" target="_blank">/in/eduardowanka</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <a href="#" target="_blank">@eduardowanka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form slide-in-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eduardo Wanka</h3>
+                    <p>Desenvolvedor Full Stack Senior</p>
+                    <p>Transformando ideias em realidade digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#about">Sobre Mim</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="comments.html">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@eduardowanka.dev</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eduardo Wanka. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Initialize typed.js for hero subtitle
+        document.addEventListener('DOMContentLoaded', function() {
+            const typed = new Typed('.typed-text', {
+                strings: [
+                    'Desenvolvedor Full Stack Senior',
+                    'Especialista em React & Node.js',
+                    'Arquiteto de Soluções Cloud',
+                    'Apaixonado por Código Limpo'
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|

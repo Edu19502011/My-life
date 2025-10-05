@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depoimentos - Eduardo Wanka | Feedback & Comentários</title>
+    <meta name="description" content="Leia depoimentos e feedbacks de clientes e colegas sobre o trabalho de Eduardo Wanka. Deixe seu comentário sobre nossa colaboração.">
+    <meta name="keywords" content="depoimentos, feedback, comentários, clientes, colaboração, portfolio">
+    <meta name="author" content="Eduardo Wanka">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Depoimentos - Eduardo Wanka">
+    <meta property="og:description" content="Veja o que clientes e colegas dizem sobre o trabalho de Eduardo Wanka.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduardowanka.dev/comments.html">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="page-background">
+        <div class="hero-shader"></div>
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-grid"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Eduardo Wanka</span>
+                <span class="logo-subtitle">Senior Full Stack Developer</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">Sobre</a>
+                <a href="index.html#experience" class="nav-link">Experiência</a>
+                <a href="index.html#skills" class="nav-link">Habilidades</a>
+                <a href="index.html#projects" class="nav-link">Projetos</a>
+                <a href="index.html#blog" class="nav-link">Blog</a>
+                <a href="index.html#certifications" class="nav-link">Certificações</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+                <a href="comments.html" class="nav-link active">Depoimentos</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-hire" id="hireButton">Contratar</button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="comments-header">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Depoimentos</span>
+                <h1 class="page-title">O que dizem sobre meu trabalho</h1>
+                <p class="page-subtitle">
+                    Feedback de clientes, colegas e parceiros sobre nossas colaborações. 
+                    Sua opinião é fundamental para meu crescimento profissional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="comments-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="47">0</h3>
+                        <p class="stat-label">Depoimentos</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="4.9">0</h3>
+                        <p class="stat-label">Avaliação Média</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="32">0</h3>
+                        <p class="stat-label">Clientes Satisfeitos</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="15">0</h3>
+                        <p class="stat-label">Projetos Completados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Depoimentos Recentes</h2>
+                <p class="section-subtitle">Feedback de quem já trabalhou comigo</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card featured">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Carlos Silva">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Carlos Silva</h4>
+                            <p class="testimonial-role">CEO, TechStart Solutions</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "Trabalhar com Eduardo foi uma experiência excepcional. Sua expertise em React e Node.js transformou nossa ideia em uma aplicação robusta e escalável. A entrega foi pontual e o código é de alta qualidade."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">Dezembro 2024</span>
+                        <span class="testimonial-project">Sistema de Gestão Empresarial</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Mariana Santos">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Mariana Santos</h4>
+                            <p class="testimonial-role">Product Manager, InnovaCorp</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "Eduardo é um profissional completo. Além de suas habilidades técnicas impressionantes, sua capacidade de comunicação e trabalho em equipe são notáveis. Ele liderou nosso projeto com maestria."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">Novembro 2024</span>
+                        <span class="testimonial-project">Plataforma de E-commerce</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Roberto Oliveira">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Roberto Oliveira</h4>
+                            <p class="testimonial-role">CTO, Digital Agency Pro</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "Profissionalismo e qualidade definem o trabalho do Eduardo. Ele desenvolveu nossa API REST com arquitetura impecável e documentação completa. Recomendo fortemente!"
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">Outubro 2024</span>
+                        <span class="testimonial-project">API RESTful</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Ana Paula Ferreira">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Ana Paula Ferreira</h4>
+                            <p class="testimonial-role">Designer UX/UI, Creative Studio</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "Colaboração perfeita! Eduardo transformou meus designs em uma interface fluida e responsiva. Sua atenção aos detalhes e compromisso com a qualidade são excepcionais."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">Setembro 2024</span>
+                        <span class="testimonial-project">Aplicação Web Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Lucas Mendes">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Lucas Mendes</h4>
+                            <p class="testimonial-role">Founder, StartupBoost</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "Eduardo foi fundamental para o sucesso do nosso MVP. Sua experiência em startups e tecnologias modernas nos ajudou a lançar rapidamente com qualidade profissional."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">Agosto 2024</span>
+                        <span class="testimonial-project">MVP SaaS Platform</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Patrícia Lima">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Patrícia Lima</h4>
+                            <p class="testimonial-role">Diretora de TI, Enterprise Solutions</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "Contratamos Eduardo para uma migração complexa de legado para cloud. O projeto foi executado perfeitamente, com zero downtime e performance superior. Excelente trabalho!"
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">Julho 2024</span>
+                        <span class="testimonial-project">Migração Cloud AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Testimonial Section -->
+    <section class="add-testimonial-section">
+        <div class="container">
+            <div class="add-testimonial-card">
+                <div class="section-header">
+                    <h2 class="section-title">Deixe seu Depoimento</h2>
+                    <p class="section-subtitle">Sua opinião é muito importante para meu crescimento profissional</p>
+                </div>
+                
+                <form class="testimonial-form" id="testimonialForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Cargo/Empresa</label>
+                            <input type="text" id="role" name="role" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project">Projeto/Collaboração</label>
+                        <input type="text" id="project" name="project" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rating">Avaliação</label>
+                        <div class="rating-input">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Depoimento</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Compartilhe sua experiência de trabalho comigo..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Depoimento
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eduardo Wanka</h3>
+                    <p>Desenvolvedor Full Stack Senior</p>
+                    <p>Transformando ideias em realidade digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#about">Sobre Mim</a></li>
+                        <li><a href="index.html#projects">Projetos</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@eduardowanka.dev</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eduardo Wanka. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="comments.js"></script>
+</body>
+</html>
